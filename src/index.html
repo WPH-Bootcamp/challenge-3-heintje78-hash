@@ -3,14 +3,206 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
+    <title>Build with the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet" />
+    
   </head>
-  <body>
+
+    <body class="bg-black text-[#FDFDFD] antialiased overflow-x-hidden font-['Inter',sans-serif] has-[#menu-toggle:checked]:overflow-hidden lg:has-[#menu-toggle:checked]:overflow-auto">
+  
     <!-- ========== NAVBAR ========== -->
+     <nav class="fixed top-0 left-0 w-full z-100 bg-black/95 backdrop-blur-sm py-3">
+    <div class="container mx-auto px-6 lg:px-12 max-w-300 flex justify-between items-center relative">
+        
+        <a href="#" class="text-2xl font-black text-neutral-25 tracking-tighter py-1 z-110">
+            Tech.
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+        <label for="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer z-110 relative 
+            peer-checked:[&>span:nth-child(1)]:translate-y-[8px] peer-checked:[&>span:nth-child(1)]:rotate-45
+            peer-checked:[&>span:nth-child(2)]:opacity-0
+            peer-checked:[&>span:nth-child(3)]:-translate-y-[8px] peer-checked:[&>span:nth-child(3)]:-rotate-45">
+            
+            <span class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </label>
+
+        <ul class="fixed lg:static top-0 -left-full peer-checked:left-0 w-full lg:w-auto h-screen lg:h-auto bg-black lg:bg-transparent flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end pt-24 lg:pt-0 px-6 lg:px-0 space-y-6 lg:space-y-0 lg:space-x-10 transition-all duration-500 z-105">
+            <li><a href="#about" class="text-[#fdfdfd] hover:text-blue-500 font-medium transition text-xl lg:text-base">About</a></li>
+            <li><a href="#services" class="text-[#fdfdfd] hover:text-blue-500 font-medium transition text-xl lg:text-base">Service</a></li>
+            <li><a href="#work" class="text-[#fdfdfd] hover:text-blue-500 font-medium transition text-xl lg:text-base">Our Work</a></li>
+            <li><a href="#team" class="text-[#fdfdfd] hover:text-blue-500 font-medium transition text-xl lg:text-base">Team</a></li>
+            
+            <li class="lg:hidden w-full pt-6 self-center max-w-125">
+                <a href="#contact" class="block w-full text-center bg-[#421abc] text-[#fdfdfd] py-2.5 rounded-full font-bold text-lg hover:bg-blue-600 transition shadow-lg">
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+
+        <a href="#contact" class="hidden lg:block bg-[#421abc] text-neutral-25 px-7 py-2.5 rounded-full text-sm font-bold hover:bg-blue-600 transition shadow-lg">
+            Contact Us
+        </a>
+    </div>
+</nav>
 
     <!-- ========== HERO SECTION ========== -->
 
+    <header class="w-full bg-[linear-gradient(180deg,#000000_30%,#210A5E_100%)] pt-32 pb-0 overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12 max-w-300 flex flex-col lg:flex-row items-center gap-16px">
+            
+            <div class="w-full lg:w-3/5 text-left z-10">
+                <h1 class="text-4xl md:tracking-wide lg:text-6xl font-black text-neutral-25 leading-[0.95] mb-8 tracking-[1px]">
+                    Build with the <span class="italic">Future.</span>
+                </h1>
+                <p class="text-sm md:text-lg text-[#717680] mb-10 max-w-xl leading-relaxed">
+                    From building sleek websites and mobile apps to integrating AI solutions, we help brands turn ideas into powerful digital experiences that connect, engage, and scale.
+                </p>
+                
+                <div class="flex justify-start pb-12">
+                    <a href="#contact" class="w-full max-w-125 lg:w-auto inline-block text-center bg-[#421abc] text-neutral-25 py-2.5 lg:px-16 rounded-full text-lg hover:bg-blue-600 transition shadow-lg">Let's Talk
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/5 flex justify-center lg:justify-end items-end order-last lg:order-0">
+                <img src="../assets/images/hand.png" alt="Futuristic Hand" class="w-75 md:w-100 lg:w-full max-w-125 block align-bottom ]">
+            </div>
+
+        </div>
+    </header>
+    <section id="about" class="py-24 bg-[#000000]">
+        <div class="container mx-auto px-6 max-w-225 text-center gap-16px">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-25 mb-8 tracking-tight">Who We Are</h2>
+            <p class="text-lg md:text-xl leading-relaxed text-neutral-500 max-w-3xl mx-auto">
+                We're a group of tech students trained in <span class="text-white font-semibold">building real-world digital products</span><span>.</span> 
+                From coding to design, <span class="text-white font-semibold">we craft modern solutions for modern problems</span><span>.</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="pb-24 bg-[#000000]">
+        <div class="container mx-auto px-6 max-w-300 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-25 mb-4 tracking-tight">What We Do</h2>
+            <p class="mb-16 text-neutral-500">Simple tech solutions to help your ideas grow.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10">
+                <div class="p-8 border border-neutral-900 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/Website.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">Web Development</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+                </div>
+                <div class="p-8 border border-neutral-900 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/Mobile.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">App Development</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Mobile and desktop apps tailored for your needs.</p>
+                </div>
+                <div class="p-8 border border-neutral-900 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/AI.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">AI Integration</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Smart solutions using AI powered tools and automation.</p>
+                </div>
+                <div class="p-8 border border-neutral-900 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/Paint.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">UI/UX Design</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Clean and functional designs for better user experience.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/Landing Page.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">Landing Page</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">High converting landing pages for your product or business.<p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-2xl bg-[#000000] hover:border-[#421abc] hover:-translate-y-2 transition-all group cursor-pointer">
+                    <img src="../assets/images/CMS.png" class="mx-auto mb-6 h-12 group-hover:scale-110 transition">
+                    <h3 class="text-[#fdfdfd] text-sm md:text-lg font-bold mb-2">CMS Integration</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Easy-to-manage websites with WordPress or Webflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="work" class=" md:pb-24 text-center">
+        <div class="container mx-auto px-5 max-w-275">
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-25 mb-4">Our Work</h2>
+            <p class="mb-12 text-neutral-500">See what we've built with passion and purpose.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#000000] p-5 rounded-2xl hover:-translate-y-4 transition-all duration-400 group overflow-hidden">
+                    <img src="../assets/images/portfolio 1.png" alt="Work 1" class="w-full rounded-lg mb-4 group-hover:scale-105 transition duration-500">
+                    <p class="text-neutral-25 font-semibold text-left">Portfolio 1</p>
+                </div>
+                <div class="bg-[#000000] p-5 rounded-2xl hover:-translate-y-4 transition-all duration-400 group overflow-hidden">
+                    <img src="../assets/images/portfolio 2.png" alt="Work 2" class="w-full rounded-lg mb-4 group-hover:scale-105 transition duration-500">
+                    <p class="text-neutral-25 font-semibold text-left">Portfolio 2</p>
+                </div>
+                <div class="bg-[#000000] p-5 rounded-2xl hover:-translate-y-4 transition-all duration-400 group overflow-hidden">
+                    <img src="../assets/images/portfolio 3.png" alt="Work 3" class="w-full rounded-lg mb-4 group-hover:scale-105 transition duration-500">
+                    <p class="text-neutral-25 font-semibold text-left">Portfolio 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-16 md:py-24 bg-[#000000] text-center">
+        <div class="container mx-auto px-5 max-w-275">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Meet the Team</h2>
+            <p class="mb-8 text-neutral-500">A group of future-ready tech makers.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="group p-4 transition duration-300 hover:-translate-y-2">
+                    <img src="../assets/images/jasperkim.png" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-2 border-4 border-transparent group-hover:border-[#421abc] group-hover:scale-110 transition duration-300 object-cover">
+                    <h4 class="text-neutral-25 font-bold group-hover:text-blue-500 transition">Jasper Kim</h4>
+                    <p class="text-xs text-neutral-500">Project Manager</p>
+                </div>
+                <div class="group p-4 transition duration-300 hover:-translate-y-2">
+                    <img src="../assets/images/alexjonathan.png" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-2 border-4 border-transparent group-hover:border-[#421abc] group-hover:scale-110 transition duration-300 object-cover">
+                    <h4 class="text-neutral-25 font-bold group-hover:text-blue-500 transition">Alex Jonathan</h4>
+                    <p class="text-xs text-neutral-500">Full-Stack Developer</p>
+                </div>
+                <div class="group p-4 transition duration-300 hover:-translate-y-2">
+                    <img src="../assets/images/mariolopez.png" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-2 border-4 border-transparent group-hover:border-[#421abc] group-hover:scale-110 transition duration-300 object-cover">
+                    <h4 class="text-neutral-25 font-bold group-hover:text-blue-500 transition">Mario Lopez</h4>
+                    <p class="text-xs text-neutral-500">UI/UX Designer</p>
+                </div>
+                <div class="group p-4 transition duration-300 hover:-translate-y-2">
+                    <img src="../assets/images/robertangelo.png" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-2 border-4 border-transparent group-hover:border-[#421abc] group-hover:scale-110 transition duration-300 object-cover">
+                    <h4 class="text-neutral-25 font-bold group-hover:text-blue-500 transition">Robert Angelo</h4>
+                    <p class="text-xs text-neutral-500">Data Scientist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 text-center">
+        <div class="container mx-auto px-5 max-w-150">
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-25 mb-6">Let's Collaborate</h2>
+            <p class="mb-10 text-sm text-neutral-500">Need a tech team? We're ready to help!</p>
+            <form action="#" class="flex flex-col gap-6 text-left">
+                <div class="flex flex-col gap-2">
+                    <label class="text-neutral-25 text-sm font-medium">Name</label>
+                    <input type="text" placeholder="Enter your name" required class="bg-[#000000] border border-[#252b37] rounded-xl p-4 text-sm text-neutral-25 focus:outline-none focus:border-blue-500 transition">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-neutral-25 text-sm font-medium">Email</label>
+                    <input type="email" placeholder="Enter your email" required class="bg-[#000000] border border-[#252b37] rounded-xl p-4 text-sm text-neutral-25 focus:outline-none focus:border-blue-500 transition">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-neutral-25 text-sm font-medium">Message</label>
+                    <textarea placeholder="Enter your message" required class="bg-[#000000] border border-[#252b37] rounded-xl p-4 text-sm text-neutral-25 focus:outline-none focus:border-blue-500 transition min-h-37.5"></textarea>
+                </div>
+                <button type="submit" class="bg-[#421abc] text-neutral-25 py-3 rounded-full font-semibold hover:bg-blue-600 transition shadow-lg">Send</button>
+            </form>
+        </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
+
+    <footer class="py-8 border-t border-[#181d27] text-center text-neutral-500">
+        <div class="container mx-auto px-1 text-xs">
+            <p>&copy; 2025 Web Programming Hack. All rights reserved.</p>
+        </div>
+    </footer>
   </body>
 </html>
